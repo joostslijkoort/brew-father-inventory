@@ -1,54 +1,25 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
+  <h1 align="center">🍺</h1>
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  BrewFather Inventory
 </h1>
 
-## 🚀 Quick start
+## 🚀 How to get your own BrewFather public inventory list
 
-1.  **Create a Gatsby site.**
+1.  **Fork this repo**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+2.  **Setup GitHub Pages**
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+    - Navigate to Settings > Pages
+    - Select the `gh-pages` branch and select `/ root`
 
-2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+3.  **Setup GitHub secrets**
+    - Navigate to Settings > Secrets
+    - Add an `ACCESS_TOKEN` secret (create it [here](https://github.com/settings/tokens), `repo` permissions required)
+    - Add a `BREWFATHER_API_KEY` secret (this key can be found in the BrewFather app)
+    - Add a `BREWFATHER_USER_ID` secret (this key can be found in the BrewFather app)
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+4.  **Winning**
+    - Your Github Actions will contain a workflow that will publish your inventory every six hours.
