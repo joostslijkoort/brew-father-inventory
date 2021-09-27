@@ -1,6 +1,6 @@
 import * as React from "react"
-import { graphql } from 'gatsby'
-import styled from 'styled-components'
+import { graphql } from "gatsby"
+import styled from "styled-components"
 
 const StyledMain = styled.main`
   padding: 4rem;
