@@ -11,6 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
+        env:
+          BREWFATHER_USER_ID: ${{ secret.BREWFATHER_USER_ID }}
+          BREWFATHER_API_KEY: ${{ secret.BREWFATHER_API_KEY }}
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
