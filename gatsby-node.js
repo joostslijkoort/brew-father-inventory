@@ -4,7 +4,7 @@ const crypto = require('crypto');
 exports.sourceNodes = async ({ actions }) => {
   const { createNode } = actions;
 
-  const fermentablesData = await axios.get('https://api.brewfather.app/v1/inventory/fermentables', {
+  const fermentablesData = await axios.get('https://api.brewfather.app/v1/inventory/fermentables?limit=50', {
     auth: {
       username: process.env.BREWFATHER_USER_ID,
       password: process.env.BREWFATHER_API_KEY,
@@ -38,7 +38,7 @@ exports.sourceNodes = async ({ actions }) => {
     createNode(itemNode);
   });
 
-  const hopsData = await axios.get('https://api.brewfather.app/v1/inventory/hops', {
+  const hopsData = await axios.get('https://api.brewfather.app/v1/inventory/hops?limit=50', {
     auth: {
       username: process.env.BREWFATHER_USER_ID,
       password: process.env.BREWFATHER_API_KEY,
@@ -70,7 +70,7 @@ exports.sourceNodes = async ({ actions }) => {
     createNode(itemNode);
   });
 
-  const miscsData = await axios.get('https://api.brewfather.app/v1/inventory/miscs?include=unit', {
+  const miscsData = await axios.get('https://api.brewfather.app/v1/inventory/miscs?include=unit&limit=50', {
     auth: {
       username: process.env.BREWFATHER_USER_ID,
       password: process.env.BREWFATHER_API_KEY,
@@ -102,7 +102,7 @@ exports.sourceNodes = async ({ actions }) => {
     createNode(itemNode);
   });
 
-  const yeastsData = await axios.get('https://api.brewfather.app/v1/inventory/yeasts?include=unit', {
+  const yeastsData = await axios.get('https://api.brewfather.app/v1/inventory/yeasts?include=unit&limit=50', {
     auth: {
       username: process.env.BREWFATHER_USER_ID,
       password: process.env.BREWFATHER_API_KEY,
