@@ -1,14 +1,14 @@
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
+/**
+ * @type {import('gatsby').GatsbyConfig}
+ */
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
-    title: "BrewFather Inventory",
+    siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: [
-    "gatsby-plugin-styled-components",
-  ],
-  pathPrefix: "/brew-father-inventory",
+  plugins: ["gatsby-plugin-styled-components", {
+    resolve: 'gatsby-plugin-manifest',
+    options: {
+      "icon": "src/images/icon.png"
+    }
+  }]
 };
